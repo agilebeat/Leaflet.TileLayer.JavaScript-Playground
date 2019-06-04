@@ -1,38 +1,23 @@
 {
-  "name": "sandbox_js",
-  "version": "7.0.1",
-  "description": "T",
+  "name": "leaflet.tilelayer.javascript-playground",
+  "version": "1.0.0",
+  "description": "Sandbox for JS snippets necessary to understand Leaflet code",
   "main": "index.js",
-  "types": "./dist/base64url.d.ts",
-  "files": [
-    "dist/",
-    "index.js"
-  ],
   "scripts": {
-    "build": "tsc",
-    "clean": "rm -f dist/*",
-    "test": "npm run clean && npm run build && tap test/*.test.js",
-    "prepublishOnly": "npm run test"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/brianloveswords/base64url.git"
+    "url": "git+https://mpdwulit@github.com/agilebeat-inc/Leaflet.TileLayer.JavaScript-Playground.git"
   },
   "keywords": [
-    "base64",
-    "base64url"
+    "JavaScript",
+    "Leaflet"
   ],
-  "author": "Brian J Brennan",
-  "license": "MIT",
-  "engines": {
-    "node": ">=6.0.0"
-  },
-  "devDependencies": {
-    "@types/node": "^10.0.0",
-    "tap": "^12.1.0"
-  },
+  "author": "Marek Dwulit",
+  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/brianloveswords/base64url/issues"
+    "url": "https://github.com/agilebeat-inc/Leaflet.TileLayer.JavaScript-Playground/issues"
   },
-  "homepage": "https://github.com/brianloveswords/base64url#readme"
+  "homepage": "https://github.com/agilebeat-inc/Leaflet.TileLayer.JavaScript-Playground#readme"
 }
