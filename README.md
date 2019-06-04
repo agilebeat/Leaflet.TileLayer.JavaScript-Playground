@@ -2,7 +2,8 @@
 
 #Useful links:
 
-| Description             | URL                                                                     |
-|-------------------------|-------------------------------------------------------------------------|
-| IntelliJ for JS - HowTo | https://www.jetbrains.com/help/idea/javascript-specific-guidelines.html |
-|   |   |
+| Description                                                 | URL                                                                             |
+|-------------------------------------------------------------|---------------------------------------------------------------------------------|
+| IntelliJ for JS - HowTo                                     | https://www.jetbrains.com/help/idea/javascript-specific-guidelines.html         |
+| Understanding the JavaScript Prototype Chain & Inheritance  |  https://community.risingstack.com/javascript-prototype-chain-inheritance/      |
+| All about this keyword                                      | https://codeburst.io/all-about-this-and-new-keywords-in-javascript-38039f71780c |
