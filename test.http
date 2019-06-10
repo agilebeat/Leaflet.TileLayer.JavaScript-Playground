@@ -1,0 +1,14 @@
+### Send POST request with json body
+OPTIONS https://30bswdtfuj.execute-api.us-east-1.amazonaws.com/test/tail
+Content-Type: application/json
+
+### Send POST request with json body
+POST https://30bswdtfuj.execute-api.us-east-1.amazonaws.com/test/tail
+Content-Type: application/json
+
+{
+  "id": 999,
+  "value": "content"
+}
+
+###

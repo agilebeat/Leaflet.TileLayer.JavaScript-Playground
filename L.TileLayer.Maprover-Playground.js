@@ -192,14 +192,18 @@ L.TileLayer.include({
 		var base64_str = dataURL.replace(/^data:image\/(png|jpg);base64,/, "")
 		var base64_url = base64_str.replace(/\+/g, '-').replace(/\//g, '_');
 		//console.log(base64_url);
+		var body_json = { "string1": base64_url}
 		var xhr = new XMLHttpRequest();
-		xhr.open('GET', 'https://localhost:8888/' + base64_url, true);
+		xhr.open('POST', 'https://30bswdtfuj.execute-api.us-east-1.amazonaws.com/test/tail', true);
+		xhr.setRequestHeader('Content-Type', 'application/json')
 
 		xhr.onload = function () {
 			console.log('---------posted---------');
 		};
 
-		xhr.send(null);
+
+
+		xhr.send(JSON.stringify(body_json));
 
 		canvas.toBlob(
 			function(blob) {
