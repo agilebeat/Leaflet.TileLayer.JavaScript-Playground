@@ -3,7 +3,7 @@ OPTIONS https://30bswdtfuj.execute-api.us-east-1.amazonaws.com/test/tail
 Content-Type: application/json
 
 ### Send POST request with json body
-POST https://30bswdtfuj.execute-api.us-east-1.amazonaws.com/test/tail
+POST https://ptinrba5a5.execute-api.us-east-1.amazonaws.com/classify
 Content-Type: application/json
 
 {

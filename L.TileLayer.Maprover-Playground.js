@@ -179,6 +179,10 @@ L.TileLayer.include({
 			return;
 		}
 
+
+		var url = new URL(tileUrl)
+		path_array = (url.pathname.split('/'))
+
 		var canvas = document.createElement("canvas");
 		canvas.width = tile.naturalWidth || tile.width;
 		canvas.height = tile.naturalHeight || tile.height;
@@ -190,11 +194,9 @@ L.TileLayer.include({
 
 		var dataURL = canvas.toDataURL("image/png");
 		var base64_str = dataURL.replace(/^data:image\/(png|jpg);base64,/, "")
-		var base64_url = base64_str.replace(/\+/g, '-').replace(/\//g, '_');
-		//console.log(base64_url);
-		var body_json = { "string1": base64_url}
+		var body_json = { "z": path_array[1], "x": path_array[2], "y": path_array[3], "tile_base64": base64_str }
 		var xhr = new XMLHttpRequest();
-		xhr.open('POST', 'https://30bswdtfuj.execute-api.us-east-1.amazonaws.com/test/tail', true);
+		xhr.open('POST', 'https://ptinrba5a5.execute-api.us-east-1.amazonaws.com/classify/maprover', true);
 		xhr.setRequestHeader('Content-Type', 'application/json')
 
 		xhr.onload = function () {
