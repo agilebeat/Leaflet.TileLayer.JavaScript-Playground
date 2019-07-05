@@ -15,19 +15,65 @@
             height: 100%;
             width: 100%;
         }
+        .button-action{
+            height: 40px;
+            width: 200px;
+            text-decoration: none;
+            text-align: center;
+            color: white;
+            background: url('https://i.hizliresim.com/QpVGbg.png') no-repeat;
+            font-family: Minecraft;
+            line-height: 26px;
+            padding-top: 6px;
+        }
+        .button-action:hover {
+            background: url('https://i.hizliresim.com/a1zraR.png') no-repeat;
+        }
     </style>
+    <script>
+        function Action() {
+            alert('HELLO');
+        }
+    </script>
 </head>
 <body>
     <div id="map"></div>
+    <div class="leaflet-top leaflet-right">
+        <button ion-button class="button-action" onclick="Action()"  block>Action!</button>
+    </div>
 
     <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet-src.js"></script>
     <script src="https://unpkg.com/pouchdb@^7.0.0/dist/pouchdb.js"></script>
 
     <script src="L.TileLayer.Maprover-Playground.js"></script>
     <script>
+        var customControl =  L.Control.extend({
+
+            options: {
+                position: 'topleft'
+            },
+
+            onAdd: function (map) {
+                var container = L.DomUtil.create('div', 'leaflet-bar leaflet-control leaflet-control-custom');
+
+                container.style.backgroundColor = 'white';
+                container.style.backgroundImage = "url(railroad-icon.png)";
+                container.style.backgroundSize = "45px 45px";
+                container.style.width = '45px';
+                container.style.height = '45px';
+
+                container.onclick = function(){
+                    console.log('buttonClicked');
+                }
+
+                return container;
+            }
+        });
 
         // 		var map = L.map('map').setView([63.41784,10.40359], 5);
         var map = L.map('map').setView([-41.2458, 174.78682], 16);
+        map.addControl(new customControl());
+
 
         var layer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
