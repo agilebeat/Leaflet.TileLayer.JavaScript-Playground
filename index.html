@@ -6,9 +6,19 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" />
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+        html, body, #map {
+            height: 100%;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
-    <div id="map" style="width: 1200px; height: 800px"></div>
+    <div id="map"></div>
 
     <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet-src.js"></script>
     <script src="https://unpkg.com/pouchdb@^7.0.0/dist/pouchdb.js"></script>
@@ -17,7 +27,7 @@
     <script>
 
         // 		var map = L.map('map').setView([63.41784,10.40359], 5);
-        var map = L.map('map').setView([40,-100], 4);
+        var map = L.map('map').setView([-41.2458, 174.78682], 16);
 
         var layer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
