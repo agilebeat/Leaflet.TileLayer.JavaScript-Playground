@@ -15,32 +15,10 @@
             height: 100%;
             width: 100%;
         }
-        .button-action{
-            height: 40px;
-            width: 200px;
-            text-decoration: none;
-            text-align: center;
-            color: white;
-            background: url('https://i.hizliresim.com/QpVGbg.png') no-repeat;
-            font-family: Minecraft;
-            line-height: 26px;
-            padding-top: 6px;
-        }
-        .button-action:hover {
-            background: url('https://i.hizliresim.com/a1zraR.png') no-repeat;
-        }
     </style>
-    <script>
-        function Action() {
-            alert('HELLO');
-        }
-    </script>
 </head>
 <body>
     <div id="map"></div>
-    <div class="leaflet-top leaflet-right">
-        <button ion-button class="button-action" onclick="Action()"  block>Action!</button>
-    </div>
 
     <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet-src.js"></script>
     <script src="https://unpkg.com/pouchdb@^7.0.0/dist/pouchdb.js"></script>
