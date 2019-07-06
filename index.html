@@ -25,7 +25,7 @@
 
     <script src="L.TileLayer.Maprover-Playground.js"></script>
     <script>
-        var customControl =  L.Control.extend({
+        var railControl =  L.Control.extend({
 
             options: {
                 position: 'topleft'
@@ -48,9 +48,57 @@
             }
         });
 
+        var tweetControl =  L.Control.extend({
+
+            options: {
+                position: 'topleft'
+            },
+
+            onAdd: function (map) {
+                var container = L.DomUtil.create('div', 'leaflet-bar leaflet-control leaflet-control-custom');
+
+                container.style.backgroundColor = 'white';
+                container.style.backgroundImage = "url(tweet-icon.png)";
+                container.style.backgroundSize = "45px 45px";
+                container.style.width = '45px';
+                container.style.height = '45px';
+
+                container.onclick = function(){
+                    console.log('buttonClicked');
+                }
+
+                return container;
+            }
+        });
+
+        var filterTweetControl =  L.Control.extend({
+
+            options: {
+                position: 'topleft'
+            },
+
+            onAdd: function (map) {
+                var container = L.DomUtil.create('div', 'leaflet-bar leaflet-control leaflet-control-custom');
+
+                container.style.backgroundColor = 'white';
+                container.style.backgroundImage = "url(filter-icon.png)";
+                container.style.backgroundSize = "45px 45px";
+                container.style.width = '45px';
+                container.style.height = '45px';
+
+                container.onclick = function(){
+                    console.log('buttonClicked');
+                }
+
+                return container;
+            }
+        });
+
         // 		var map = L.map('map').setView([63.41784,10.40359], 5);
         var map = L.map('map').setView([-41.2458, 174.78682], 16);
-        map.addControl(new customControl());
+        map.addControl(new railControl());
+        map.addControl(new tweetControl());
+        map.addControl(new filterTweetControl());
 
 
         var layer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {

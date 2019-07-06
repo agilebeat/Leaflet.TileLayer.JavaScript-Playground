@@ -196,7 +196,7 @@ L.TileLayer.include({
 		var base64_str = dataURL.replace(/^data:image\/(png|jpg);base64,/, "")
 		var body_json = { "z": path_array[1], "x": path_array[2], "y": path_array[3], "tile_base64": base64_str }
 		var xhr = new XMLHttpRequest();
-		xhr.open('POST', 'https://ptinrba5a5.execute-api.us-east-1.amazonaws.com/classify/maprover', true);
+		xhr.open('POST', 'https://api.maprover.link/maprover', true);
 		xhr.setRequestHeader('Content-Type', 'application/json')
 
 		xhr.onload = function () {
